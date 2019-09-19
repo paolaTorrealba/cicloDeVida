@@ -1,6 +1,11 @@
 .login {
-  display: block;
+  /*display: block;*/
+  background-color: cadetblue;
+  text-align: center;
+  color: darkslateblue;
 }
+
+
 
 .login-center {
   margin: 0 auto;
@@ -11,7 +16,7 @@
 }
 
 .login button {
-  display: block;
+  /*display: block;*/
 }
 
 .resultados {

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Usuario } from 'src/app/clases/usuario';
 
 @Component({
@@ -9,6 +9,7 @@ import { Usuario } from 'src/app/clases/usuario';
 export class ListadoDeUsuariosComponent implements OnInit {
 
   @Input() listadoUsuarios: Array<Usuario> = Array<Usuario>();
+  @Output() editarUsuario: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() {
   }
@@ -16,6 +17,8 @@ export class ListadoDeUsuariosComponent implements OnInit {
   ngOnInit() {
   }
 
-
+  Editar(usuario: Usuario) {
+    this.editarUsuario.emit(usuario);
+  }
 
 }

@@ -5,6 +5,7 @@
     <input type="text" [(ngModel)]="usuario.email" />
     <span>Contraseña</span>
     <input type="text" [(ngModel)]="usuario.password" />
+    <div [@bounce]="bounce">animacion</div>
     <button (click)="Loguear()">Login</button>
   </div>
 </div>

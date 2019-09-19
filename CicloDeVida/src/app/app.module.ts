@@ -1,3 +1,6 @@
+import { MihttpService } from './servicios/mihttp/mihttp.service';
+import { PaisesService } from './servicios/paises/paises.service';
+import { PaisesComponent } from './componentes/paises/paises.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -11,12 +14,15 @@ import { ErrorComponent } from './componentes/error/error.component';
 import { ListadoDeUsuariosComponent } from './componentes/listado-de-usuarios/listado-de-usuarios.component';
 import { UsuarioComponent } from './componentes/usuario/usuario.component';
 import { GrillaUsuariosComponent } from './componentes/grilla-usuarios/grilla-usuarios.component';
+import { HttpClientModule } from '@angular/common/http';
+import {BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 const miRuteo = [
   { path: 'bienvenida', component: BienvenidaComponent },
   { path: 'login', component: LoginComponent },
   { path: 'usuario', component: UsuarioComponent },
+  { path: 'paises', component: PaisesComponent },
   { path: '', component: LoginComponent },
   { path: '**', component: ErrorComponent } //Error
 ];
@@ -29,14 +35,16 @@ const miRuteo = [
     ErrorComponent,
     ListadoDeUsuariosComponent,
     UsuarioComponent,
-    GrillaUsuariosComponent
+    GrillaUsuariosComponent,
+    PaisesComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, BrowserAnimationsModule,
     RouterModule.forRoot(miRuteo),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ PaisesService, MihttpService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
