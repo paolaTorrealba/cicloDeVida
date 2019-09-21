@@ -1,1 +1,10 @@
-<router-outlet></router-outlet>
+<!--<router-outlet></router-outlet>
+<header>
+    <a routerLink="bienvenida" routerLinkActive="active">bienvenida</a>
+    <a routerLink="about" routerLinkActive="active">About</a>
+    <a routerLink="contact" routerLinkActive="active">Contact</a>
+</header>-->
+
+<div [@routeAnimations]="prepareRoute(outlet)" >
+        <router-outlet #outlet="outlet"></router-outlet>
+      </div>

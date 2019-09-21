@@ -37,6 +37,7 @@ const miRuteo = [
     UsuarioComponent,
     GrillaUsuariosComponent,
     PaisesComponent
+
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,

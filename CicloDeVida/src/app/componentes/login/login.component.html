@@ -5,12 +5,16 @@
     <input type="text" [(ngModel)]="usuario.email" />
     <span>Contraseña</span>
     <input type="text" [(ngModel)]="usuario.password" />
-    <div [@bounce]="bounce">animacion</div>
-    <button (click)="Loguear()">Login</button>
+    <div [@bounce]="bounce">
+      <!--<button (click)="Loguear()">Login</button>-->
+      <button routerLink="bienvenida">Login</button>
+      
+    </div>
+    
   </div>
 </div>
-<div *ngIf="logueado" class="resultados">
+<!--<div *ngIf="logueado" class="resultados">
   <h1>Usuario Logueado</h1>
   <span>email: {{ usuario.email }}</span>
   <span>contraseña: {{ usuario.password }}</span>
-</div>
+</div>-->
